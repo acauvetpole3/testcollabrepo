@@ -5,7 +5,7 @@
 #
 # @description: reads analog data from an MCP3008 and prints
 # 
-# copyright 2019
+# copyright 2020
 #
 ########################################
 
