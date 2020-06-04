@@ -1,3 +1,14 @@
+#!/usr/bin/python3
+########################################
+# @filename: LEDloop.py
+# @author: jai cauvet
+#
+# @description: reads analog data from an MCP3008 and prints
+# 
+# copyright 2020
+#
+########################################
+
 from gpiozero import MCP3008
 import time
 import sys
