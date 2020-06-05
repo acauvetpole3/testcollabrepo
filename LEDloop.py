@@ -12,8 +12,10 @@
 from gpiozero import MCP3008
 import time
 import sys
+import logging
 
 def main(lr):
+    logging.info("Staring main loop")
     try:
         lr_int = int(lr)
         photoresistor = MCP3008(lr_int)
@@ -22,6 +24,7 @@ def main(lr):
             time.sleep(.03)
     except KeyboardInterrupt:
         # handle keyboard interrupt #
+        logging.info("Exiting LEDLoop.py")
         sys.exit(0)
     except Exception, e:
         indent = len(program_name) * " "
@@ -41,6 +44,7 @@ if __name__ == "__main__":
         sys.exit(main(lr))
     except KeyboardInterrupt:
         # handle keyboard interrupt #
+        logging.info("Exiting LEDLoop.py")
         sys.exit(0)
     except Exception, e:
         indent = len(sys.argv[0]) * " "
