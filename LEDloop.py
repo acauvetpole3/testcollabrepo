@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 ########################################
 # @filename: LEDloop.py
-# @author: jai cauvet
+# @author: Jai Cauvet
 #
 # @description: reads analog data from an MCP3008 and prints
 # 
@@ -14,13 +14,13 @@ import time
 import sys
 import logging
 
-def main(lr, lr2=None):
+def main(light_resistror, light_resistror2=None):
     logging.info("Staring main loop")
     try:
-        lr_int = int(lr)
+        lr_int = int(light_resistror)
         photoresistor = MCP3008(lr_int)
         if lr2 is not None:
-            lr2_int = int(lr2)
+            lr2_int = int(light_resistror2)
             photoresistor2 = MCP3008(lr2_int)
         while True:
             if lr2 is not None:
